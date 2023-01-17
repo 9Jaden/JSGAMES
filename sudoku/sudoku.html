@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="./sudoku.css" type="text/css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Sudoku</h1>
+    </header>
+    <div class="container">
+      <div class="sudoku">
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </div>
+
+      <div class="info">
+        <div class="todo">
+          <span class="select_header">选择难度：</span>
+          <select class="select">
+            <option class="junior">初级</option>
+            <option class="middle">中级</option>
+            <option class="high">高级</option>
+          </select>
+          <button class="ranking_btn" onclick="openChart()">排行榜</button>
+        </div>
+        <div class="reminder">
+          <label>请选择难度开始比赛</label>
+        </div>
+        <button class="start" onclick="renderSudo()">开始游戏</button>
+        <button class="submit" onclick="submit()">提交结果</button>
+      </div>
+      <div class="username-box">
+        <p>游戏通过！！！用时：<span class="time">0</span>min</p>
+        <span>请输入你的用户名：</span>
+        <input type="text" class="username" />
+        <input
+          class="submit-grade"
+          type="button"
+          onclick="submitScore()"
+          value="提交"
+        />
+      </div>
+      <div class="rank-chart">
+        <header class="chart-header">
+          <span
+            >最好成绩:&nbsp; <span class="b-username"></span>&nbsp;--&nbsp;
+            <span class="b-time"></span>min
+          </span>
+        </header>
+        <header class="chart-header">
+          <span>最近十次成绩</span>
+        </header>
+        <ul class="rank-li">
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+          <li>
+            <span class="username"></span>&nbsp;--&nbsp;<span
+              class="user-time"
+            ></span
+            >&nbsp;min
+          </li>
+        </ul>
+        <button class="close" onclick="closeChart()">确定</button>
+      </div>
+    </div>
+    <script src="./sudoku.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
